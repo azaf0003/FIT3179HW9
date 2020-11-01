@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 500,
   "height": 400,
-  "title": "Co2 Emmissions Around The Globe",
   "data": {
     "url": "https://raw.githubusercontent.com/azaf0003/FIT3179HW9/main/co2_2.csv"
   },
@@ -20,10 +19,11 @@
     },
     {
       "name": "Continent_selection",
+      "value":"World",
       "bind": {
         "input": "select",
         "options": [
-          null,
+          "World",
           "North America",
           "South America",
           "Europe",
@@ -32,7 +32,7 @@
           "Oceania"
         ],
         "labels": [
-          "Show All",
+          "World",
           "North America",
           "South America",
           "Europe",
@@ -46,23 +46,34 @@
   ],
   "transform": [
     {
-      "filter": "Continent_selection == null || datum.Country == Continent_selection"
+      "filter": "datum.Country == Continent_selection"
     },
     {"filter": "year(datum.Year) > Year_Above"}
   ],
   "mark": {"type": "line",  "point": true},
   "encoding": {
+    "color":"darkred",
     "y": {
       "field": "AnnualCO2Emissions",
       "type": "quantitative",
-      "title": "Confirmed Cases",
-      "aggregate": "sum"
+      "title": "Annual Co2 emissions (Million)",
+      "aggregate": "sum",
+      "axis": {"tickCount": 3}
     },
-    "x": {"field": "Year", "type": "temporal"},
-    "tooltip": [
+    "x": {
+      "field": "Year", 
+      "type": "temporal"
+      },
+      
+      "tooltip": [
       {"field": "AnnualCO2Emissions", "aggregate": "sum", "format": ".2f", "type": "quantitative", "title": "Total Emission"}, 
-      {"field": "Year", "type": "temporal", "title": "Year"}
+      {"field": "Year", "type": "temporal", "title": "Year", "timeUnit":"year"}
     ]
   },
-  "config": {}
+   "config": {
+      "background":"",
+  "view": {
+     "stroke": "transparent"
+  }
+}
 }
