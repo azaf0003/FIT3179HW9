@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
+  "width": 600,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/azaf0003/FIT3179HW9/main/co2_2.csv"
@@ -57,8 +57,7 @@
       "field": "AnnualCO2Emissions",
       "type": "quantitative",
       "title": "Annual Co2 emissions (Million)",
-      "aggregate": "sum",
-      "axis": {"grid": false, "ticks": false}
+      "aggregate": "sum"
     },
     "x": {
       "field": "Year", 
