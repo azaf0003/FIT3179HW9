@@ -58,11 +58,12 @@
       "type": "quantitative",
       "title": "Annual Co2 emissions (Million)",
       "aggregate": "sum",
-      "axis": {"tickCount": 3}
+      "axis": {"grid": false, "ticks": false}
     },
     "x": {
       "field": "Year", 
-      "type": "temporal"
+      "type": "temporal",
+      "axis": {"grid": false, "ticks": false}
       },
       
       "tooltip": [
