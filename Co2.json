@@ -50,7 +50,7 @@
     },
     {"filter": "year(datum.Year) > Year_Above"}
   ],
-  "mark": {"type": "line",  "point": true},
+  "layer":[{"mark": {"type": "line",  "point": true},
   "encoding": {
     "color":"darkred",
     "y": {
@@ -69,7 +69,15 @@
       {"field": "AnnualCO2Emissions", "aggregate": "sum", "format": ".2f", "type": "quantitative", "title": "Total Emission"}, 
       {"field": "Year", "type": "temporal", "title": "Year", "timeUnit":"year"}
     ]
-  },
+  }},
+  {"mark": {
+          "type": "text",
+          "align": "right",
+          "dx": 300,
+          "dy": -180,
+          "text": "Emissions growth seem to have slowed down over last few years but they have yet to reach their peak <---"
+        }
+}],
    "config": {
       "background":"",
   "view": {
