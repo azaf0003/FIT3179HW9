@@ -57,12 +57,13 @@
       "field": "AnnualCO2Emissions",
       "type": "quantitative",
       "title": "Annual Co2 emissions (Million)",
-      "aggregate": "sum"
+      "aggregate": "sum",
+      "axis": {"domainColor":""}
     },
     "x": {
       "field": "Year", 
       "type": "temporal",
-      "axis": {"grid": false, "ticks": false}
+      "axis": {"grid": false, "domainColor":"", "ticks": false}
       },
       
       "tooltip": [
