@@ -75,9 +75,9 @@
           "align": "right",
           "dx": 300,
           "dy": -180,
-          "text": "Emissions growth seem to have slowed down over last few years but they have yet to reach their peak <---",
+          "text": "Emissions growth have slowed down over last few years but yet to reach their peak.",
           "fontSize": 13,
-          "fontWeight":"normal",
+          "fontWeight":"lighter",
           "fontStyle":"italic"
         }
 }],
